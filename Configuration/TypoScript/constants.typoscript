@@ -1,0 +1,60 @@
+
+plugin.tx_transfermietwagen_buchungtransfer {
+    view {
+        # cat=plugin.tx_transfermietwagen_buchungtransfer/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:transfer_mietwagen/Resources/Private/Templates/
+        # cat=plugin.tx_transfermietwagen_buchungtransfer/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:transfer_mietwagen/Resources/Private/Partials/
+        # cat=plugin.tx_transfermietwagen_buchungtransfer/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:transfer_mietwagen/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_transfermietwagen_buchungtransfer//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+
+plugin.tx_transfermietwagen_transferverwaltung {
+    view {
+        # cat=plugin.tx_transfermietwagen_transferverwaltung/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:transfer_mietwagen/Resources/Private/Templates/
+        # cat=plugin.tx_transfermietwagen_transferverwaltung/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:transfer_mietwagen/Resources/Private/Partials/
+        # cat=plugin.tx_transfermietwagen_transferverwaltung/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:transfer_mietwagen/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_transfermietwagen_transferverwaltung//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+
+plugin.tx_transfermietwagen_stadtverwaltung {
+    view {
+        # cat=plugin.tx_transfermietwagen_stadtverwaltung/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:transfer_mietwagen/Resources/Private/Templates/
+        # cat=plugin.tx_transfermietwagen_stadtverwaltung/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:transfer_mietwagen/Resources/Private/Partials/
+        # cat=plugin.tx_transfermietwagen_stadtverwaltung/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:transfer_mietwagen/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_transfermietwagen_stadtverwaltung//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+
+plugin.tx_transfermietwagen_autopark {
+    view {
+        # cat=plugin.tx_transfermietwagen_autopark/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:transfer_mietwagen/Resources/Private/Templates/
+        # cat=plugin.tx_transfermietwagen_autopark/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:transfer_mietwagen/Resources/Private/Partials/
+        # cat=plugin.tx_transfermietwagen_autopark/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:transfer_mietwagen/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_transfermietwagen_autopark//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

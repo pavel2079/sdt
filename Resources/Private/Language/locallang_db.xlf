@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2020-05-17T03:11:02Z" product-name="transfer_mietwagen">
+		<header/>
+		<body>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung">
+				<source>Buchung</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.id_user">
+				<source>Id User</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.id_fahrer">
+				<source>Id Fahrer</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.name_kunde">
+				<source>Name Kunde</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.telefon">
+				<source>Telefon</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.tel_kunde">
+				<source>Tel Kunde</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.email_kunde">
+				<source>Email Kunde</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.adresse">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.staat">
+				<source>Staat</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.stadt">
+				<source>Stadt</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.plz">
+				<source>Plz</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.zeit_control">
+				<source>Zeit Control</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.start">
+				<source>Start</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.end">
+				<source>End</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.start_mkt">
+				<source>Start Mkt</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.start_zuruck">
+				<source>Start Zuruck</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.end_zuruck">
+				<source>End Zuruck</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.start_zuruck_mkt">
+				<source>Start Zuruck Mkt</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.ab">
+				<source>Ab</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.abzuruck">
+				<source>Abzuruck</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.bis">
+				<source>Bis</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.biszuruck">
+				<source>Biszuruck</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.von">
+				<source>Von</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.von_adress">
+				<source>Von Adress</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.von_adress_zuruck">
+				<source>Von Adress Zuruck</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.nach">
+				<source>Nach</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.nach_adress">
+				<source>Nach Adress</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.nach_adress_zuruck">
+				<source>Nach Adress Zuruck</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.aid">
+				<source>Aid</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.distance">
+				<source>Distance</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.distance_erw">
+				<source>Distance Erw</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.art">
+				<source>Art</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.z_art">
+				<source>Z Art</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.back">
+				<source>Back</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.koffer">
+				<source>Koffer</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.rent_time">
+				<source>Rent Time</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.kindersitz">
+				<source>Kindersitz</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.von_flug">
+				<source>Von Flug</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.zur_flug">
+				<source>Zur Flug</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.flug_nr">
+				<source>Flug Nr</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.flug_zeit">
+				<source>Flug Zeit</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.flug_nr_zuruck">
+				<source>Flug Nr Zuruck</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.flug_zeit_zuruck">
+				<source>Flug Zeit Zuruck</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.grundpreis">
+				<source>Grundpreis</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.summa">
+				<source>Summa</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.provision">
+				<source>Provision</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.mwst">
+				<source>Mwst</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.bezahlt">
+				<source>Bezahlt</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.vorkasse">
+				<source>Vorkasse</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.schild">
+				<source>Schild</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.kommentar">
+				<source>Kommentar</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.agent">
+				<source>Agent</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_buchung.auto">
+				<source>Auto</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_stadt">
+				<source>Stadt</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_stadt.plz">
+				<source>Plz</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_stadt.name_stadt">
+				<source>Name Stadt</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto">
+				<source>Auto</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.adm_name">
+				<source>Adm Name</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.kurz_name">
+				<source>Kurz Name</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.klass">
+				<source>Klass</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.tab">
+				<source>Tab</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.max_person">
+				<source>Max Person</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.max_koffer">
+				<source>Max Koffer</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.preis">
+				<source>Preis</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.koef20b40">
+				<source>Koef20b40</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.koef40b50">
+				<source>Koef40b50</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.koef50b70">
+				<source>Koef50b70</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.koef70b100">
+				<source>Koef70b100</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.koef100">
+				<source>Koef100</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.beschreibung">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.beschreibung_ru">
+				<source>Beschreibung Ru</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.beschreibung_en">
+				<source>Beschreibung En</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.prov_pausch">
+				<source>Prov Pausch</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.prov_proz">
+				<source>Prov Proz</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.img">
+				<source>Img</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.img_big">
+				<source>Img Big</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_auto.tr_preis">
+				<source>Tr Preis</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_flughafen">
+				<source>Flughafen</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_flughafen.name_aus">
+				<source>Name Aus</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_flughafen.name_aus_ru">
+				<source>Name Aus Ru</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_flughafen.nm">
+				<source>Nm</source>
+			</trans-unit>
+			<trans-unit id="tx_transfermietwagen_domain_model_flughafen.airport">
+				<source>Airport</source>
+			</trans-unit>
+			<trans-unit id="tx_transfer_mietwagen_buchungtransfer.name">
+				<source>Transfer Buchung</source>
+			</trans-unit>
+			<trans-unit id="tx_transfer_mietwagen_buchungtransfer.description">
+				<source>Buchung der Transfer und Mietwagen</source>
+			</trans-unit>
+			<trans-unit id="tx_transfer_mietwagen_transferverwaltung.name">
+				<source>Transfer Verwaltung</source>
+			</trans-unit>
+			<trans-unit id="tx_transfer_mietwagen_transferverwaltung.description">
+				<source>Verwaltung der Transfer und Mietwagen</source>
+			</trans-unit>
+			<trans-unit id="tx_transfer_mietwagen_stadtverwaltung.name">
+				<source>Stadt Verwaltung</source>
+			</trans-unit>
+			<trans-unit id="tx_transfer_mietwagen_stadtverwaltung.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="tx_transfer_mietwagen_autopark.name">
+				<source>Autopark</source>
+			</trans-unit>
+			<trans-unit id="tx_transfer_mietwagen_autopark.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

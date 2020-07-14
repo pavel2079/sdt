@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2020-05-17T03:11:02Z" product-name="transfer_mietwagen">
+		<header/>
+		<body>
+			<trans-unit id="adm_name.description">
+				<source>admName</source>
+			</trans-unit>
+			<trans-unit id="kurz_name.description">
+				<source>kurzName</source>
+			</trans-unit>
+			<trans-unit id="klass.description">
+				<source>klass</source>
+			</trans-unit>
+			<trans-unit id="tab.description">
+				<source>tab</source>
+			</trans-unit>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="max_person.description">
+				<source>maxPerson</source>
+			</trans-unit>
+			<trans-unit id="max_koffer.description">
+				<source>maxKoffer</source>
+			</trans-unit>
+			<trans-unit id="preis.description">
+				<source>preis</source>
+			</trans-unit>
+			<trans-unit id="koef20b40.description">
+				<source>koef20b40</source>
+			</trans-unit>
+			<trans-unit id="koef40b50.description">
+				<source>koef40b50</source>
+			</trans-unit>
+			<trans-unit id="koef50b70.description">
+				<source>koef50b70</source>
+			</trans-unit>
+			<trans-unit id="koef70b100.description">
+				<source>koef70b100</source>
+			</trans-unit>
+			<trans-unit id="koef100.description">
+				<source>koef100</source>
+			</trans-unit>
+			<trans-unit id="beschreibung.description">
+				<source>beschreibung</source>
+			</trans-unit>
+			<trans-unit id="beschreibung_ru.description">
+				<source>beschreibungRu</source>
+			</trans-unit>
+			<trans-unit id="beschreibung_en.description">
+				<source>beschreibungEn</source>
+			</trans-unit>
+			<trans-unit id="prov_pausch.description">
+				<source>provPausch</source>
+			</trans-unit>
+			<trans-unit id="prov_proz.description">
+				<source>provProz</source>
+			</trans-unit>
+			<trans-unit id="img.description">
+				<source>img</source>
+			</trans-unit>
+			<trans-unit id="img_big.description">
+				<source>imgBig</source>
+			</trans-unit>
+			<trans-unit id="tr_preis.description">
+				<source>Dinamische Preise des Transfers</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

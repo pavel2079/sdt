@@ -1,0 +1,28 @@
+{
+    "name": "sdt/transfer-mietwagen",
+    "type": "typo3-cms-extension",
+    "description": "Transfer und Mietwagen. Buchung und Verwaltung.",
+    "authors": [
+        {
+            "name": "Stolberg",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sdt\\TransferMietwagen\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sdt\\TransferMietwagen\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "sdt/transfer-mietwagen": "self.version",
+        "typo3-ter/transfer-mietwagen": "self.version"
+    }
+}

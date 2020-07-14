@@ -1,0 +1,125 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+<f:section name="content">
+
+     <f:if condition="{agent} == 0">
+	  <div class="col-sm-12 text-center">
+		  <div id="sdt">
+	    	<div id="uberschrift" class="text-center">
+				<a href="/"><img src="/typo3conf/ext/sdt_grundlage/Resources/Public/img/logotip.png" alt="STD Transfer" border="0"></a>
+	    	   <div id="namefirma">
+			    <h1><f:translate key='PROFESSIONELLER_TRANSFERSERVICE' /></h1>
+			    <h3><f:translate key='BUNDESWEITER_FLUGHAFENTRANSFER' /></h3>
+			    <h3><f:translate key='FAHRZEUG_MIT_FAHRER_GANZ' /></h3>
+			   </div>
+		    </div>
+		  </div>
+	    	<div id="uberschrift-kl" class="text-center">
+	    		        	<div class="clearfix"></div>
+			    <h1><f:translate key="PROFESSIONELLER_TRANSFERSERVICE" /></h1>
+			    <h3><f:translate key='BUNDESWEITER_FLUGHAFENTRANSFER' /></h3>
+			    <h3><f:translate key='FAHRZEUG_MIT_FAHRER_GANZ' /></h3>
+		    </div>
+	  </div>
+      <div class="clearfix"></div>
+	 </f:if>
+
+  <div class="main-form">
+   <div class="stena">
+	<div class="col-md-5 transfkarta" id="mymap">
+	  <h3><f:translate key='LAB_ZUSAMMENFASSUNG' /><br />
+	      <img src="/typo3conf/ext/sdt_grundlage/Resources/Public/img/punktA.png" alt="Punkt A" width="20" height="32" border="0" /> &nbsp;{ArrArguments.from}<br />
+	      <img src="/typo3conf/ext/sdt_grundlage/Resources/Public/img/punktB.png" alt="punkt B" width="20" height="32" border="0" /> &nbsp;{ArrArguments.to}
+      </h3>
+	   <table width="100%">
+	      <tr>
+	        <td align="left">
+	            <b><f:translate key='FAHRT_AM' /></b>: {ArrArguments.event_start} {ArrArguments.uhr}:{ArrArguments.minuten}
+	        </td>
+	        <td align="right">
+	          <f:if condition="{ArrArguments.back} == 1">
+	             <b><f:translate key='LAB_ROUTE_ZURUCK' /></b>: {ArrArguments.event_zuruck} {ArrArguments.abfahrtUhr}:{ArrArguments.abfahrtMinuten}
+			  </f:if>
+	        </td>
+	      </tr>
+	      <tr>
+	        <td align="left">
+	            <b><f:translate key='LAB_ENTFERNUNG' /></b>: {arrStrecke.entfernung} km
+	        </td>
+	        <td align="right">
+	            <b><f:translate key='LAB_DAUER' /></b>: {arrStrecke.dauer}
+	        </td>
+	      </tr>
+	   </table>
+       <div class="clearfix"></div>
+		  <iframe src="/typo3conf/ext/transfer_mietwagen/Resources/Public/Strecke/index.php?o={arrStrecke.origin}&d={arrStrecke.destination}" width="100%" height="365" align="center"></iframe>
+		  <br />
+		</div>
+
+	<div class="col-md-7 text-center">
+
+      <f:for each="{autos}" as="auto">
+
+        <f:form method="post" action="formTransfer" additionalAttributes="{role: 'form'}">
+            <f:form.hidden name="type" value="1" />  <!-- при трансфере - 1, при аренде - 0 -->
+            <!-- <input type="hidden" name="type" value="###LAB_TRANSFER_BUCHEN###" /> -->
+            <f:form.hidden name="from" value="{ArrArguments.from}" />
+            <f:form.hidden name="to" value="{ArrArguments.to}" />
+            <f:form.hidden name="back" value="{ArrArguments.back}" />
+            <f:form.hidden name="entfernung" value="{arrStrecke.entfernung}" />
+            <f:form.hidden name="entfernung2" value="{arrStrecke.entfernung_2}" />
+            <f:form.hidden name="entfernung3" value="{arrStrecke.entfernung_3}" />
+            <f:form.hidden name="hinMitWaluf" value="{arrStrecke.hinMitWaluf}" />
+            <f:form.hidden name="event_start" value="{ArrArguments.event_start}" />
+            <f:form.hidden name="uhr" value="{ArrArguments.uhr}" />
+            <f:form.hidden name="minuten" value="{ArrArguments.minuten}" />
+		    <f:if condition="{ArrArguments.back} == 1">
+	           <f:form.hidden name="event_zuruck" value="{ArrArguments.event_zuruck}" />
+	           <f:form.hidden name="abfahrtUhr" value="{ArrArguments.abfahrtUhr}" />
+	           <f:form.hidden name="abfahrtMinuten" value="{ArrArguments.abfahrtMinuten}" />
+			</f:if>
+            <f:form.hidden name="agent" value="{ArrArguments.agent}" />
+		    <f:if condition="{fid} > 0">
+	           <f:form.hidden name="fid" value="{fid}" />
+	           <f:form.hidden name="username" value="{username}" />
+	           <f:form.hidden name="uscreate" value="{uscreate}" />
+	           <f:form.hidden name="usergroup" value="{usergroup}" />
+			</f:if>
+
+			<div class="col-xs-12 form-auto-block" data-val="{auto.kurz_name}">
+				<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 text-left">
+				   <img src="/typo3conf/ext/sdt_grundlage/Resources/Public/img/autos/{auto.img}"><br />
+				   <div class="text-left" style="margin-top:5px;">
+				      &nbsp;&nbsp; <img src="/typo3conf/ext/sdt_grundlage/Resources/Public/img/icons8-person-24.png" width="24" height="24" alt="Maximum Pax" border="0" /> <b>Max. {auto.max_person}</b><br />
+				      &nbsp;&nbsp; <img src="/typo3conf/ext/sdt_grundlage/Resources/Public/img/kofer.png" width="22" height="26" alt="Maximum Pax" border="0" /> <b>Max. {auto.max_koffer}</b>
+				   </div>
+				</div>
+				<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 text-left">
+					<div class="form-auto-title">{auto.name}</div>
+					<b>{auto.klass}</b>
+				</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 text-left">
+					<f:translate key='LAB_WARTEZEIT' />
+				</div>
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 text-center">
+		          <f:if condition="{auto.trPreis} > 0">
+	               <f:then><big><b>{auto.trPreis}</b></big> €</f:then>
+	               <f:else><big><b><f:translate key='auf_anfrage' /></b></big></f:else>
+				  </f:if><br />
+				   <i><small><f:translate key='LAB_ALLE_PREISE' /></small></i><br /><br />
+                   <f:form.hidden name="wagen" value="{auto.uid}" />
+                   <f:form.hidden name="trpreis" value="{auto.trPreis}" />
+			       <f:form.submit class="button3_rt" value="auswählen" />
+				</div>
+			</div>
+        </f:form>
+
+      </f:for>
+	</div>
+  <div class="clearfix"></div>
+   </div>
+  </div>
+  <div class="clearfix"></div>
+	</f:section>
+</html>

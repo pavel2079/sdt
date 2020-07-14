@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2020-05-17T03:11:02Z" product-name="transfer_mietwagen">
+		<header/>
+		<body>
+			<trans-unit id="name_aus.description">
+				<source>nameAus</source>
+			</trans-unit>
+			<trans-unit id="name_aus_ru.description">
+				<source>nameAusRu</source>
+			</trans-unit>
+			<trans-unit id="nm.description">
+				<source>nm</source>
+			</trans-unit>
+			<trans-unit id="airport.description">
+				<source>airport</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

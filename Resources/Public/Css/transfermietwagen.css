@@ -1,0 +1,91 @@
+.tx_transfermietwagen ul.list-group {
+    margin-bottom: 1rem;
+}
+.tx_transfermietwagen .card {
+    margin-bottom: 1rem;
+}
+
+.tx_transfermietwagen {
+    background-color: #eeeeee;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    padding: 1rem;
+}
+
+.tx_transfermietwagen-footer {
+    margin-top: 0.8rem;
+}
+
+/* CSS styles moved from setup.typoscript to simpleblog.css */
+textarea.f3-form-error {
+    background-color:#FF9F9F;
+    border: 1px #FF0000 solid;
+}
+
+input.f3-form-error {
+    background-color:#FF9F9F;
+    border: 1px #FF0000 solid;
+}
+
+.tx_transfermietwagen table {
+    border-collapse:separate;
+    border-spacing:10px;
+}
+
+.tx_transfermietwagen table th {
+    font-weight:bold;
+}
+
+.tx_transfermietwagen table td {
+    vertical-align:top;
+}
+
+ul.typo3-messages {
+ list-style: none;
+ padding: 15px;
+ margin-bottom: 0;
+}
+ul.typo3-messages .message-error {
+    color: red;
+}
+
+ul.typo3-messages .message-ok {
+    color: green;
+}
+
+.tx_transfermietwagen .btn-change-order {
+    margin-bottom: 0.4rem;
+}
+
+.tx_transfermietwagen .tags {
+    font-size: 1.2em;
+}
+
+.tx_transfermietwagen ul#comment-list {
+    margin-top: 1rem;
+}
+
+.tx_transfermietwagen .file-upload {
+    height: auto;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.tx_transfermietwagen .card .card-img-wrap {
+    text-align: center;
+}
+
+.tx_transfermietwagen .card .card-img-wrap .card-img-top {
+    width: unset !important;
+}

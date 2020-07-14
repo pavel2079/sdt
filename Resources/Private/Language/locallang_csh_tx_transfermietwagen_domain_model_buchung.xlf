@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2020-05-17T03:11:02Z" product-name="transfer_mietwagen">
+		<header/>
+		<body>
+			<trans-unit id="id_user.description">
+				<source>idUser</source>
+			</trans-unit>
+			<trans-unit id="id_fahrer.description">
+				<source>idFahrer</source>
+			</trans-unit>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="name_kunde.description">
+				<source>nameKunde</source>
+			</trans-unit>
+			<trans-unit id="telefon.description">
+				<source>telefon</source>
+			</trans-unit>
+			<trans-unit id="tel_kunde.description">
+				<source>telKunde</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="email_kunde.description">
+				<source>emailKunde</source>
+			</trans-unit>
+			<trans-unit id="adresse.description">
+				<source>adresse</source>
+			</trans-unit>
+			<trans-unit id="staat.description">
+				<source>staat</source>
+			</trans-unit>
+			<trans-unit id="stadt.description">
+				<source>stadt</source>
+			</trans-unit>
+			<trans-unit id="plz.description">
+				<source>plz</source>
+			</trans-unit>
+			<trans-unit id="zeit_control.description">
+				<source>zeitControl</source>
+			</trans-unit>
+			<trans-unit id="start.description">
+				<source>start</source>
+			</trans-unit>
+			<trans-unit id="end.description">
+				<source>end</source>
+			</trans-unit>
+			<trans-unit id="start_mkt.description">
+				<source>startMkt</source>
+			</trans-unit>
+			<trans-unit id="start_zuruck.description">
+				<source>startZuruck</source>
+			</trans-unit>
+			<trans-unit id="end_zuruck.description">
+				<source>endZuruck</source>
+			</trans-unit>
+			<trans-unit id="start_zuruck_mkt.description">
+				<source>startZuruckMkt</source>
+			</trans-unit>
+			<trans-unit id="ab.description">
+				<source>ab</source>
+			</trans-unit>
+			<trans-unit id="abzuruck.description">
+				<source>abzuruck</source>
+			</trans-unit>
+			<trans-unit id="bis.description">
+				<source>bis</source>
+			</trans-unit>
+			<trans-unit id="biszuruck.description">
+				<source>biszuruck</source>
+			</trans-unit>
+			<trans-unit id="von.description">
+				<source>von</source>
+			</trans-unit>
+			<trans-unit id="von_adress.description">
+				<source>vonAdress</source>
+			</trans-unit>
+			<trans-unit id="von_adress_zuruck.description">
+				<source>vonAdressZuruck</source>
+			</trans-unit>
+			<trans-unit id="nach.description">
+				<source>nach</source>
+			</trans-unit>
+			<trans-unit id="nach_adress.description">
+				<source>nachAdress</source>
+			</trans-unit>
+			<trans-unit id="nach_adress_zuruck.description">
+				<source>nachAdressZuruck</source>
+			</trans-unit>
+			<trans-unit id="aid.description">
+				<source>aid</source>
+			</trans-unit>
+			<trans-unit id="distance.description">
+				<source>distance</source>
+			</trans-unit>
+			<trans-unit id="distance_erw.description">
+				<source>distanceErw</source>
+			</trans-unit>
+			<trans-unit id="art.description">
+				<source>art</source>
+			</trans-unit>
+			<trans-unit id="z_art.description">
+				<source>zArt</source>
+			</trans-unit>
+			<trans-unit id="back.description">
+				<source>back</source>
+			</trans-unit>
+			<trans-unit id="person.description">
+				<source>person</source>
+			</trans-unit>
+			<trans-unit id="koffer.description">
+				<source>koffer</source>
+			</trans-unit>
+			<trans-unit id="rent_time.description">
+				<source>rentTime</source>
+			</trans-unit>
+			<trans-unit id="kindersitz.description">
+				<source>kindersitz</source>
+			</trans-unit>
+			<trans-unit id="von_flug.description">
+				<source>vonFlug</source>
+			</trans-unit>
+			<trans-unit id="zur_flug.description">
+				<source>zurFlug</source>
+			</trans-unit>
+			<trans-unit id="flug_nr.description">
+				<source>flugNr</source>
+			</trans-unit>
+			<trans-unit id="flug_zeit.description">
+				<source>flugZeit</source>
+			</trans-unit>
+			<trans-unit id="flug_nr_zuruck.description">
+				<source>flugNrZuruck</source>
+			</trans-unit>
+			<trans-unit id="flug_zeit_zuruck.description">
+				<source>flugZeitZuruck</source>
+			</trans-unit>
+			<trans-unit id="grundpreis.description">
+				<source>grundpreis</source>
+			</trans-unit>
+			<trans-unit id="summa.description">
+				<source>summa</source>
+			</trans-unit>
+			<trans-unit id="provision.description">
+				<source>provision</source>
+			</trans-unit>
+			<trans-unit id="mwst.description">
+				<source>mwst</source>
+			</trans-unit>
+			<trans-unit id="bezahlt.description">
+				<source>bezahlt</source>
+			</trans-unit>
+			<trans-unit id="vorkasse.description">
+				<source>vorkasse</source>
+			</trans-unit>
+			<trans-unit id="schild.description">
+				<source>schild</source>
+			</trans-unit>
+			<trans-unit id="status.description">
+				<source>status</source>
+			</trans-unit>
+			<trans-unit id="kommentar.description">
+				<source>kommentar</source>
+			</trans-unit>
+			<trans-unit id="agent.description">
+				<source>agent</source>
+			</trans-unit>
+			<trans-unit id="auto.description">
+				<source>auto</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

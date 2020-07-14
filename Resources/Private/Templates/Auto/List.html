@@ -1,0 +1,78 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+		<h1>Listing for Auto</h1>
+
+		<f:flashMessages />
+
+		<table  class="tx_transfermietwagen" >
+			<tr>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.adm_name" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.kurz_name" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.klass" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.tab" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.name" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.max_person" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.max_koffer" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.preis" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.koef20b40" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.koef40b50" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.koef50b70" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.koef70b100" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.koef100" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.beschreibung" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.beschreibung_ru" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.beschreibung_en" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.prov_pausch" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.prov_proz" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.img" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.img_big" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_auto.tr_preis" /></th>
+				<th> </th>
+				<th> </th>
+			</tr>
+
+			<f:for each="{autos}" as="auto">
+				<tr>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.admName}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.kurzName}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.klass}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.tab}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.name}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.maxPerson}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.maxKoffer}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.preis}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.koef20b40}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.koef40b50}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.koef50b70}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.koef70b100}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.koef100}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.beschreibung}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.beschreibungRu}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.beschreibungEn}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.provPausch}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.provProz}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.img}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.imgBig}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{auto : auto}"> {auto.trPreis}</f:link.action></td>
+					<td><f:link.action action="edit" arguments="{auto : auto}">Edit</f:link.action></td>
+					<td><f:link.action action="delete" arguments="{auto : auto}">Delete</f:link.action></td>
+				</tr>
+			</f:for>
+		</table>
+
+		<f:link.action action="new">New Auto</f:link.action>
+	</f:section>
+</html>

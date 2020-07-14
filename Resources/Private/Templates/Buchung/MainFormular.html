@@ -1,0 +1,350 @@
+{namespace transMietVH = Sdt\TransferMietwagen\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	<f:section name="content">
+
+     <f:if condition="{agent} == 0">
+	  <div class="col-sm-12 text-center">
+		  <div id="sdt">
+	    	<div id="uberschrift" class="text-center">
+				<a href="/"><img src="/typo3conf/ext/sdt_grundlage/Resources/Public/img/logotip.png" alt="STD Transfer" border="0"></a>
+	    	   <div id="namefirma">
+			    <h1><f:translate key='PROFESSIONELLER_TRANSFERSERVICE' /></h1>
+			    <h3><f:translate key='BUNDESWEITER_FLUGHAFENTRANSFER' /></h3>
+			    <h3><f:translate key='FAHRZEUG_MIT_FAHRER_GANZ' /></h3>
+			   </div>
+		    </div>
+		  </div>
+	    	<div id="uberschrift-kl" class="text-center">
+	    		        	<div class="clearfix"></div>
+			    <h1><f:translate key="PROFESSIONELLER_TRANSFERSERVICE" /></h1>
+			    <h3><f:translate key='BUNDESWEITER_FLUGHAFENTRANSFER' /></h3>
+			    <h3><f:translate key='FAHRZEUG_MIT_FAHRER_GANZ' /></h3>
+		    </div>
+	  </div>
+      <div class="clearfix"></div>
+	 </f:if>
+
+     <f:flashMessages />
+
+		<script type="text/javascript">
+		  function showAnfrage(){
+			$("#anfrageSenden").modal('show');
+		  }
+
+		    $(document).ready(function() {
+			      $('#MietBlock').hide();
+			      $('#rabatt').hide();
+	              $('#radio1').prop('checked', true);
+
+	             <f:if condition="{errDaten.back} > 0">
+	               <f:then>$('#back1').prop('checked', true);</f:then>
+	               <f:else>$('#event_zuruck').hide();</f:else>
+				 </f:if>
+
+			     // richtige Position der Städteliste
+		         var top = $("#autocomplete").offset().top;
+		         var left = $("#autocomplete").offset().left;
+		         $(".ui-autocomplete").offset({top: top + 97, left: left});
+		    });
+
+		    function showTransf(){
+		       $('#TransferBlock').show();
+		       $('#MietBlock').hide();
+		       $('.middle-form-miete').hide();
+		       $('.middle-form-transf').hide();
+		       $('#event_zuruck').show();
+		    }
+		    function showMiet(){
+		       $('#TransferBlock').hide(200);
+		       $('#MietBlock').show(200);
+		       $('.middle-form-miete').show(300);
+		       $('.middle-form-transf').hide();
+		       $('#event_zuruck').hide(200);
+		       $('#subm_transfer').hide();
+		    }
+		    function show2Kalender(){
+		       $('#event_zuruck').show(500);
+		       $('#rabatt').show(300);
+		    }
+		    function hide2Kalender(){
+		       $('#event_zuruck').hide(500);
+		       $('#rabatt').hide(500);
+		    }
+		    // Kalender
+			var disabledDays = ["12-31-3021"];
+
+			function disableAllTheseDays(date) {
+			    var m = date.getMonth(), d = date.getDate(), y = date.getFullYear();
+			    for (i = 0; i < disabledDays.length; i++) {
+			        if($.inArray((m+1) + '-' + d + '-' + y,disabledDays) != -1) {
+			            return [false];
+			        }
+			    }
+			    return [true];
+			}
+
+			 $( function() {
+			    $( "#kalender_1" ).datepicker({
+		             monthNames: ["January","February","March","April","May","June","July","August","September","October","November","December"],
+		             dayNamesMin: ["So","Mo","Di","Mi","Do","Fr","Sa"],
+		          	 beforeShowDay: disableAllTheseDays,
+			         minDate: '<f:format.raw>{mindatum}</f:format.raw>',
+				  	 onClose: function( selectedDate ) {
+				  	 	var nextDate = $(this).datepicker('getDate');
+			            if (nextDate) {
+			                  nextDate.setDate(nextDate.getDate() + 1);
+			            }
+					   $( "#kalender_2" ).datepicker( "option", "minDate", nextDate );
+					 }
+		        });
+			    $( "#kalender_2" ).datepicker({
+		             monthNames: ["January","February","March","April","May","June","July","August","September","October","November","December"],
+		             dayNamesMin: ["So","Mo","Di","Mi","Do","Fr","Sa"],
+		          	 beforeShowDay: disableAllTheseDays,
+					 onClose: function( selectedDate ) {
+					   $( "#kalender_1" ).datepicker( "option", "maxDate", selectedDate );
+					 }
+		        });
+			 });
+		</script>
+
+   <f:form id="schritte1form" method="post" action="showStrecke" additionalAttributes="{role: 'form'}">  <!-- см scripts_f05177abed Zeile 2340 -->
+     <div class="container">
+       <div class="main-form">
+        <div class="stena">
+    	 <div class="top-form col-sm-12">
+    				<div class="col-md-4">
+	    					<div class="radio1">
+	    					    <f:form.radio class="radio" id="radio1" name="type" onclick="showTransf();" value="1" />
+	    						<label for="radio1"><f:translate key='LAB_TRANSFER_BUCHEN' /></label>
+	    					</div>
+	    					<div class="radio2">
+	    					    <f:form.radio class="radio" id="radio2" name="type" onclick="showMiet();" value="0" />
+	    						<label for="radio2"><f:translate key='LAB_AUTO_MIETEN' /></label>
+	    					</div>
+    				</div>
+    				<div class="col-md-6 text-left">
+	    				  <div id="TransferBlock">
+							<f:form.textfield name="from" id="autocomplete" class="marshrut" placeholder="von" title="type &quot;a&quot;" value="<f:format.raw>{errDaten.from}</f:format.raw>" /><br />
+							<f:form.textfield name="to" id="autocomplete2" class="marshrut" placeholder="nach" title="type &quot;a&quot;" value="<f:format.raw>{errDaten.to}</f:format.raw>" /><br />
+	    					<div class="radio3">
+	    						<f:form.radio name="back" onclick="show2Kalender();" value="1" id="back1" /> <label style="color:white;font-size:18px;"><f:translate key='LAB_HIN_UND_ZURUCK' /></label> &nbsp;&nbsp;
+	    						<f:form.radio name="back" onclick="hide2Kalender();" value="0" checked="checked" /> <label style="color:white;font-size:18px;"><f:translate key='LAB_NUR_HIN' /></label>
+	    					</div>
+	                      </div>
+			           <!-- Mietblock -->
+	    				  <div id="MietBlock">:
+	    			        <f:form.select name="fromMiete" class="marshrut">
+	                          <f:for each="{flughafens}" as="flughafen">
+						          <f:if condition="{currentSpracheUid} == 2">
+					               <f:then>
+	    						     <option value="{flughafen.name_aus}">{flughafen.name_aus_ru}</option>
+					               </f:then>
+					               <f:else>
+	    						     <option value="{flughafen.name_aus}">{flughafen.name_aus}</option>
+					               </f:else>
+								  </f:if>
+	                          </f:for>
+	    			        </f:form.select>
+	    			        <div class="clear"></div>:
+	    			        <f:form.select name="rent_time" class="marshrut rent_time">
+	    			                 <f:form.select.option value="3"><f:translate key='LAB_STUNDENZAHL' /></f:form.select.option>
+		                          <f:for each="<transMietVH:simpleEach init='1' max='12' step='1' rasmK='1' rasmV='1' />" key="key" as="value">
+	    			                 <f:form.select.option value="{value}">{key} <f:translate key='LAB_STUNDE' /></f:form.select.option>
+		                          </f:for>
+	    			        </f:form.select>
+	                      </div>
+	                   <!-- END MietBlock -->
+	   				</div>
+	   				<div class="col-md-2 text-right">
+			    		<div id="call-img">
+			    			<a href="#back-call" onclick="showAnfrage();"><img src="/typo3conf/ext/sdt_grundlage/Resources/Public/img/phone-icon.png" class="tada animated infinite" alt=""></a>
+			    			<div class="circle circle_1"></div>
+			    			<div class="circle circle_2"></div>
+			    			<div class="circle circle_3"></div>
+			    			<div class="circle circle_4"></div>
+			    			<div class="circle circle_5"></div>
+			    		</div>
+	   				</div>
+    		        	<div class="clearfix"></div>
+                    <!-- Abholblock für Transfer und Miete -->
+			            <div class="col-md-5 col-sm-12" id="event_start">
+						  <ul class="list-inline">
+						   <li>  <!-- Abholdatum: -->
+			                <span style="color:white;font-size:18px;"><f:translate key='LAB_DATUM' />:</span><br />
+							<f:form.textfield name="event_start" class="event_start" id="kalender_1" size="13" value="<f:format.raw>{errDaten.event_start}</f:format.raw>" additionalAttributes="{AUTOCOMPLETE: 'off'}" />
+						   </li>
+						   <li>  <!-- Abholzeit: -->
+		                    <span style="color:white;font-size:18px;"><f:translate key='LAB_ZEIT' />:</span><br />
+	    			        <f:form.select name="uhr" id="uhr" class="marshrut3">
+		                          <f:for each="<transMietVH:simpleEach init='0' max='23' step='1' rasmK='2' rasmV='1' />" key="key" as="value">
+				                     <option value="{value}" <f:if condition='{errDaten.uhr}=={key}'>selected="selected"</f:if>>{key}</option>
+		                          </f:for>
+	    			        </f:form.select><span style="color:white">:</span>
+	    			        <f:form.select name="minuten" id="minuten" class="marshrut3">
+		                          <f:for each="<transMietVH:simpleEach init='0' max='55' step='5' rasmK='2' rasmV='2' />" key="key" as="value">
+				                     <option value="{value}" <f:if condition='{errDaten.minuten}=={key}'>selected="selected"</f:if>>{key}</option>
+		                          </f:for>
+		  					</f:form.select>
+						   </li>
+						  </ul>
+			            </div>
+                    <!-- END Abholblock für Transfer und Miete -->
+	                <!-- TransferBlock -->
+			            <div class="col-md-5 col-sm-12" id="event_zuruck">
+						  <ul class="list-inline">
+						   <li>             <!-- Datum des Rückfahrts: -->
+			                <span style="color:white;font-size:18px;"><f:translate key='LAB_DATUM_RUCKFLUG' />:</span><br />
+							<f:form.textfield name="event_zuruck" class="event_start" id="kalender_2" size="13" value="<f:format.raw>{errDaten.event_zuruck}</f:format.raw>" additionalAttributes="{AUTOCOMPLETE: 'off'}" />
+						   </li>
+						   <li>
+				            <span style="color:white;font-size:18px;"><f:translate key='LAB_ZEIT' />:</span><br />
+	    			        <f:form.select name="abfahrtUhr" id="abfahrtUhr" class="marshrut3">
+		                          <f:for each="<transMietVH:simpleEach init='0' max='23' step='1' rasmK='2' rasmV='1' />" key="key" as="value">
+				                     <option value="{value}" <f:if condition='{errDaten.abfahrtUhr}=={key}'>selected="selected"</f:if>>{key}</option>
+		                          </f:for>
+	    			        </f:form.select><span style="color:white">:</span>
+	    			        <f:form.select name="abfahrtMinuten" id="abfahrtMinuten" class="marshrut3">
+		                          <f:for each="<transMietVH:simpleEach init='0' max='55' step='5' rasmK='2' rasmV='2' />" key="key" as="value">
+				                     <option value="{value}" <f:if condition='{errDaten.abfahrtMinuten}=={key}'>selected="selected"</f:if>>{key}</option>
+		                          </f:for>
+		  					</f:form.select>
+						   </li>
+						  </ul>
+			            </div>
+			            <div class="col-md-2 col-sm-12" id="subm_transfer">
+                             <f:form.hidden name="agent" value="{agent}" />
+						     <f:if condition="{fid} > 0">
+					           <f:form.hidden name="fid" value="{fid}" />
+					           <f:form.hidden name="username" value="{agentur.username}" />
+					           <f:form.hidden name="uscreate" value="{agentur.uscreate}" />
+					           <f:form.hidden name="usergroup" value="{agentur.usergroup}" />
+							 </f:if>
+			               <br />
+			               <f:form.submit class="button3_rt" id="subtrtr" name="weiter" value="weiter" />
+						  <div id="rabatt" style="color:white;"><big><f:translate key='RABATT' /></big></div>
+			            </div>
+	                <!-- END TransferBlock -->
+
+                  <!-- #################################################################################################################################  -->
+
+                  <!-- END #################################################################################################################################  -->
+    			</div> <!-- END top-form -->
+    		    <div class="clearfix"></div>
+
+                 <!-- middle-form -->
+                 <!-- ------------------------------------------------------- MIETE ------------------------------------------------------------- -->
+    			<div class="middle-form-miete">
+
+	                      <!-- <input type="hidden" name="entfernung" value="###ENTFERNUNG###" />  -->
+                             <f:form.hidden name="agent" value="{agent}" />
+						     <f:if condition="{fid} > 0">
+					           <f:form.hidden name="fid" value="{fid}" />
+					           <f:form.hidden name="username" value="{agentur.username}" />
+					           <f:form.hidden name="uscreate" value="{agentur.uscreate}" />
+					           <f:form.hidden name="usergroup" value="{agentur.usergroup}" />
+							 </f:if>
+
+                    <f:for each="{autos}" as="auto">
+		    				<div class="col-xs-12 form-auto-block" data-val="{auto.kurz_name}">
+		    					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 text-left">
+		    					   <img src="/typo3conf/ext/sdt_grundlage/Resources/Public/img/autos/{auto.img}"><br />
+		    					   <div class="text-left" style="margin-top:5px;">
+		    					      &nbsp;&nbsp; <img src="/typo3conf/ext/sdt_grundlage/Resources/Public/img/icons8-person-24.png" width="24" height="24" alt="Maximum Pax" border="0" /> <b>Max. {auto.max_person}</b><br />
+		    					      &nbsp;&nbsp; <img src="/typo3conf/ext/sdt_grundlage/Resources/Public/img/kofer.png" width="22" height="26" alt="Maximum Pax" border="0" /> <b>Max. {auto.max_koffer}</b>
+		    					   </div>
+		    					</div>
+		    					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 text-left">
+		    						<div class="form-auto-title">{auto.name}</div>
+		    						<b>{auto.klass}</b>
+		    					</div>
+		    					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 text-left">
+		    						<f:translate key='LAB_WARTEZEIT' />
+		    					</div>
+		    					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 text-center autosbm">
+		    					   <b><div class="auto-price"><span>{auto.preis}</span> €</div>
+	    						                <div class="auto-descr" data-hour="Netto pro Stunde" data-car="Netto pro Auto"></div></b>
+		    					   <i><small><f:translate key='LAB_ALLE_PREISE' /></small></i><br />
+                                   <f:form.hidden name="car{auto.uid}" value="{auto.uid}" class="autouid" />
+		    					   <div class="button3_rt"><f:translate key='LAB_AUSWAHLEN' /></div>
+		    					</div>
+		    				</div>
+                    </f:for>
+                    <f:form.hidden name="car" value="" />
+    			</div>  <!-- END middle-form -->
+                 <!-- END ------------------------------------------------------- MIETE ------------------------------------------------------------- -->
+
+    		    <!-- <div id="submitForm"><div class="clearfix"></div></div> -->
+    	  </div>
+    	</div>
+     </div> <!-- end main-form-->
+  </f:form>
+
+<!-- --------------------------------------------------------------- ANFRAGE FENSTER---------------------------------------------------------------------->
+	<div id="anfrageSenden" class="modal fade">
+	  <div class="modal-dialog">
+	    <div class="modal-content" style="background:#f4b083;">
+	      <div class="modal-header" style="color:FFFFFF;">
+	        <button type="button" class="close" data-dismiss="modal" style="color:#FFFFFF;" aria-hidden="true">×</button>
+	        <h4 class="modal-title"><f:translate key='LAB_ANFRAGE' /></h4>
+	      </div>
+	      <div class="modal-body" style="background:#DDDDDD;color:#000000;">
+			<form method="POST" action="https://admin.sdt-transfer.de/index.php?id=28">
+		            <input type="text" class="hidefield" name="{anydata_1}">
+		            <input type="text" class="hidefield" name="{anydata_2}" value="http://" >
+	                <input type="hidden" name="aktuelleZeit" value="{aktuelleZeit}" />
+	    					<select class="marshrut rent_time" name="ART">
+	    						<option value=""><f:translate key='LAB_BETREFFS' /></option>
+	    						<option value="трансфер">Transfer</option>
+	   						    <option value="аренда">Mietwagen mit Chauffeur</option>
+	   						    <option value="крупногабарит"><f:translate key='LAB_NOSTANDART' /></option>
+	    					</select>
+	               <div class="clear"></div>
+	          <span class="error"><big>*</big></span><b><f:translate key='LAB_IHRENAME' /></b>:<br />
+			   <input type="text" maxlength="55" class="inputtext" name="Name" id="anfragesteller"><br />
+	          <span class="error"><big>*</big></span><b><f:translate key='LAB_TELEFON' /></b>:<br /> <input type="text" maxlength="35" class="inputtext" name="<f:translate key='PROFESSIONELLER' />Telefon" id="telanfrage" value=""><br />
+	                <span class="error"><big>*</big></span><b>Email</b>:<br />
+			            <input type="text" maxlength="65" class="inputtext" name="Email" id="emalanfrage" value=""><br />
+			            <b><f:translate key='PAX' /></b>:<br />
+			            <input type="text" size="3" class="inputtext-mini" name="Person" class="Person" />
+	               <div class="clear"></div>
+						<b><f:translate key='LAB_TEXT' /></b>:<br />
+					<div class="clear"></div>
+					  <div id="TextAnfr">
+	                     <textarea name="TextAnfrage" class="textarea" id="TextAnfrage" cols="70" rows="8" /></textarea>
+	                  </div>
+					<div class="clear"></div>
+				  <b><f:translate key='LAB_VORTEIL' /></b>:<br />
+	              <input type="radio" name="Verbindung" value="telefon" /><f:translate key='LAB_PO' /> Telefon &nbsp;
+	              <input type="radio" name="Verbindung" value="whatsapp" /><f:translate key='LAB_PO' /> Whatsapp &nbsp;
+	              <input type="radio" name="Verbindung" value="viber" /><f:translate key='LAB_PO' /> Viber &nbsp;
+	              <input type="radio" name="Verbindung" value="Email" /><f:translate key='LAB_PO' /> Email &nbsp;
+	                <br /><br />
+				  <input type="submit" name="send_anfrage" id="sendAnfrage" class="button3_rt" value="<f:translate key='Anfrage_senden' />" />
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal"><f:translate key='LAB_SCHLIESSEN' /></button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<script type="text/javascript">
+	var availableTags = [
+	   <f:for each="{stadts}" as="stadt"><f:if condition="{stadt.uid} != 1">,</f:if>'{stadt.name_stadt} <f:if condition="{stadt.plz}">({stadt.plz})</f:if>'</f:for>
+	];
+	 // von
+	$( "#autocomplete" ).autocomplete({
+		source: availableTags
+	});
+	 // nach
+	$( "#autocomplete2" ).autocomplete({
+		source: availableTags
+	});
+	</script>
+
+	</f:section>
+</html>

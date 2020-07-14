@@ -1,0 +1,146 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+		<h1>Listing for Buchung</h1>
+
+		<f:flashMessages />
+
+		<table  class="tx_transfermietwagen" >
+			<tr>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.id_user" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.id_fahrer" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.name" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.name_kunde" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.telefon" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.tel_kunde" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.email" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.email_kunde" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.adresse" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.staat" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.stadt" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.plz" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.zeit_control" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.start" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.end" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.start_mkt" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.start_zuruck" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.end_zuruck" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.start_zuruck_mkt" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.ab" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.abzuruck" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.bis" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.biszuruck" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.von" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.von_adress" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.von_adress_zuruck" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.nach" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.nach_adress" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.nach_adress_zuruck" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.aid" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.distance" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.distance_erw" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.art" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.z_art" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.back" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.person" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.koffer" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.rent_time" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.kindersitz" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.von_flug" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.zur_flug" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.flug_nr" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.flug_zeit" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.flug_nr_zuruck" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.flug_zeit_zuruck" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.grundpreis" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.summa" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.provision" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.mwst" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.bezahlt" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.vorkasse" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.schild" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.status" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.kommentar" /></th>
+				<th><f:translate key="tx_transfermietwagen_domain_model_buchung.agent" /></th>
+				<th> </th>
+				<th> </th>
+			</tr>
+
+			<f:for each="{buchungs}" as="buchung">
+				<tr>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.idUser}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.idFahrer}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.name}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.nameKunde}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.telefon}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.telKunde}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.email}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.emailKunde}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.adresse}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.staat}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.stadt}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.plz}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.zeitControl}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.start}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.end}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.startMkt}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.startZuruck}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.endZuruck}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.startZuruckMkt}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.ab}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.abzuruck}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.bis}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.biszuruck}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.von}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.vonAdress}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.vonAdressZuruck}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.nach}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.nachAdress}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.nachAdressZuruck}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.aid}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.distance}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.distanceErw}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.art}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.zArt}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.back}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.person}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.koffer}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.rentTime}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.kindersitz}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.vonFlug}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.zurFlug}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.flugNr}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.flugZeit}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.flugNrZuruck}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.flugZeitZuruck}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.grundpreis}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.summa}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.provision}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.mwst}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.bezahlt}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.vorkasse}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.schild}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.status}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.kommentar}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{buchung : buchung}"> {buchung.agent}</f:link.action></td>
+					<td><f:link.action action="edit" arguments="{buchung : buchung}">Edit</f:link.action></td>
+					<td><f:link.action action="delete" arguments="{buchung : buchung}">Delete</f:link.action></td>
+				</tr>
+			</f:for>
+		</table>
+
+		<f:link.action action="new">New Buchung</f:link.action>
+	</f:section>
+</html>

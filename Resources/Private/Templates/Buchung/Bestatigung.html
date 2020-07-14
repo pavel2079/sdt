@@ -1,0 +1,99 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	<f:section name="content">
+
+     <f:if condition="{neuBuchung.agent} == 0">
+	  <div class="col-sm-12 text-center">
+		  <div id="sdt">
+	    	<div id="uberschrift" class="text-center">
+				<a href="/"><img src="/typo3conf/ext/sdt_grundlage/Resources/Public/img/logotip.png" alt="STD Transfer" border="0"></a>
+	    	   <div id="namefirma">
+			    <h1><f:translate key='PROFESSIONELLER_TRANSFERSERVICE' /></h1>
+			    <h3><f:translate key='BUNDESWEITER_FLUGHAFENTRANSFER' /></h3>
+			    <h3><f:translate key='FAHRZEUG_MIT_FAHRER_GANZ' /></h3>
+			   </div>
+		    </div>
+		  </div>
+	    	<div id="uberschrift-kl" class="text-center">
+	    		        	<div class="clearfix"></div>
+			    <h1><f:translate key="PROFESSIONELLER_TRANSFERSERVICE" /></h1>
+			    <h3><f:translate key='BUNDESWEITER_FLUGHAFENTRANSFER' /></h3>
+			    <h3><f:translate key='FAHRZEUG_MIT_FAHRER_GANZ' /></h3>
+		    </div>
+	  </div>
+      <div class="clearfix"></div>
+	 </f:if>
+
+     <f:flashMessages />
+
+<div class="container">
+  <div class="col-sm-12">
+   <h2><f:translate key="LAB_ERFOLG" /></h2>
+	<center><span class="dunkelrot"><f:translate key="LAB_SPAM" /></span></center>
+    <!--
+    <big>Счет можно скачать здесь:</big>
+	 <a href="/admin/uploads/pdf/Rechnung_{last_id_buch}.pdf"><img src="/fileadmin/templates/admin/images/PDF-05.png" width="18" height="18" alt="PDF" border="0"></a>
+	 или в своем аккаунте<br />
+	 <big>Дорожный ваучер:</big>
+	 <a href="/admin/uploads/pdfVoucher/Voucher_{last_id_buch}.pdf"><img src="/fileadmin/templates/admin/images/PDF-05.png" width="18" height="18" alt="PDF" border="0"></a>
+     -->
+	 <br /><br />
+	 <center><big><b><f:translate key="LAB_WIEDERRUF" /> <a href="/admin/index.php?id=22">AGB</a></b></big></center>
+  </div>
+	 <br />
+  <f:if condition="{last_id_buch} > 0">
+
+	     <f:if condition="{neuBuchung.zArt} == 'PayPal'">
+	       	<b><f:translate key="LAB_AUS_ZAHLUNGSART" />: Vorauszahlung per PayPal</b>.<br /><br />
+            <b><f:translate key="LAB_OFFENERBETRAG" />: {CLEAN_SUMMA} €</b><br />
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				<input type="hidden" name="cmd" value="_xclick">
+				<input type="hidden" name="business" value="info@sdt-reisen.de">
+				<input type="hidden" name="item_name" value="{ART} {DATUM}">
+				<input type="hidden" name="amount" value="{CLEAN_SUMMA}">
+				<input type="hidden" name="currency_code" value="EUR">
+				<input type="hidden" name="no_shipping" value="1">
+				<input type="hidden" name="no_note" value="1">
+				<input type="hidden" name="invoice" value="{last_id_buch}">
+	        	<input type="hidden" name="return" value="http://sdt-transfer.de/admin/paypalBestatigung.php">
+	    	    <input type="hidden" name="cancel_return" value="http://sdt-transfer.de/admin/paypalError.php">
+				<input type="hidden" name="rm" value="2">
+				<input type="hidden" name="cbt" value="<f:translate key='LAB_ZURZURWEBSEITE' />">
+				<input type="hidden" name="lc" value="RU">
+                <input type="hidden" name="custom" value="{last_id_buch}">
+				<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="<f:translate key='BEZAHLEN' />">
+				<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+				</form>
+				<br /><br />
+		 </f:if>
+	     <f:if condition="{neuBuchung.zArt} == 'card' && {neuBuchung.zuschlag} != 15">
+	       	<big><b><f:translate key="LAB_AUS_ZAHLUNGSART" />: Kartenzahlung vor Ort<br />
+		 </f:if>
+
+	     <f:if condition="{neuBuchung.zArt} == 'Sofort'">
+	    <b><f:translate key="LAB_AUS_ZAHLUNGSART" />: Vorauszahlung per Sofortüberweisung</b>.<br /><br />
+            <b><f:translate key="LAB_OFFENERBETRAG" />: {CLEAN_SUMMA} €</b><br /><br />
+        <form method="post" action="https://www.sofort.com/payment/start">  <!-- Erfolgslink:: http://sdt-transfer.de/index.php?id=29&rechnnr=-REASON_2-&tr=-REASON_1-&betrag=-AMOUNT-  -->
+			<input type="hidden" name="user_id" value="163254" />
+			<input type="hidden" name="project_id" value="422382" />
+			<input type="hidden" name="reason_1" value="{ART} {DATUM}" /> <!-- Test-Überweisung -->
+			<input type="hidden" name="reason_2" value="{last_id_buch}" />
+			<input type="hidden" name="amount" value="{CLEAN_SUMMA}" />
+			<input type="submit" class="button3_rt" value="<f:translate key='BEZAHLEN' />" />
+		</form>
+    		<div class="clear"></div><br />
+		 </f:if>
+
+	     <f:if condition="{neuBuchung.zArt} == 'Barzahlung'">
+	       	<b><f:translate key="LAB_AUS_ZAHLUNGSART" />: Barzahlung vor Ort</b>.<br /><br />
+		 </f:if>
+	     <f:if condition="{neuBuchung.zArt} == 'Voraus'">
+	       	<b><f:translate key="LAB_AUS_ZAHLUNGSART" />: Vorauszahlung per Banküberweisung</b>.<br /><br />
+		 </f:if>
+    		</div>
+    		<div class="clear"></div><br />
+   </f:if>
+
+	</f:section>
+</html>

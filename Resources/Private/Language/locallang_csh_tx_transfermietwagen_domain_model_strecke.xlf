@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2020-04-26T22:33:28Z" product-name="transfer_mietwagen">
+		<header/>
+		<body>
+			<trans-unit id="punkt_a.description">
+				<source>punktA</source>
+			</trans-unit>
+			<trans-unit id="punkt_b.description">
+				<source>punktB</source>
+			</trans-unit>
+			<trans-unit id="distance.description">
+				<source>distance</source>
+			</trans-unit>
+			<trans-unit id="distance_erw.description">
+				<source>distanceErw</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
